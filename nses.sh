@@ -1,6 +1,5 @@
 #!/bin/bash
 set -xuo pipefail
-# WSL pasting ||| Nginx "user www-data;" ||| Nginx Gzip compression.
 
 NSES() {
 	add-apt-repository ppa:certbot/certbot -y
@@ -57,7 +56,7 @@ NSES() {
 			ln -s /etc/nginx/sites-available/${domain} /etc/nginx/sites-enabled/
 
 			mysql -u root -p << MYSQL
-				create user '${DOMAIN}'@'localhost' identified by 'mypassword';
+				create user '${DOMAIN}'@'localhost' identified by 'passwordinlocalhost';
 				create database ${DOMAIN};
 				GRANT ALL PRIVILEGES ON ${DOMAIN}.* TO ${domain}@localhost;
 			MYSQL
