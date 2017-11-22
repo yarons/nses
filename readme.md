@@ -3,8 +3,8 @@ NSES stands for Nginx Server Environment Setup. *nses.sh* is a script that let's
 * This program is aimed for pure Debian based systems, as it also adds a few aliases and programs.
 * This program should be used after basic configuration of `/etc/nginx/nginx.conf`.
 
-**WSM - Web Substrate Maker:**
-The script includes a nice maker I've named "WSM" which does the following actions in execution (after providing a web domain+tld as an argument to its alias).
+**WSM - Webapp Substrate Maker:**
+The script includes a nice maker I've named "WSM" which does the following actions in execution (after providing a \ domain+tld as an argument to its alias).
 
 The Bash alias (also created by the script, is wsm, so type in Bash prompt:
 
