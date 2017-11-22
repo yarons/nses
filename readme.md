@@ -1,4 +1,4 @@
-NSES stands for Nginx Server Environment Setup. *nses.sh* is a script that let's you to create a minimalist Nginx server environment suitable for small to medium sites (minimal configuration).
+NSES stands for Nginx Server Environment Setup. *nses.sh* is a script that let's you to create a minimalist Nginx server environment.
 
 **WSM - Web Substrate Maker:**
 The script includes a nice maker I've named "WSM" which does the following actions in execution (after providing a web domain+tld as an argument to its alias).
