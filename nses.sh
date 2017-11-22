@@ -56,7 +56,7 @@ NSES() {
 			ln -s /etc/nginx/sites-available/${domain} /etc/nginx/sites-enabled/
 
 			mysql -u root -p << MYSQL
-				create user '${DOMAIN}'@'localhost' identified by '$DOMAIN';
+				create user '${DOMAIN}'@'localhost' identified by '${DOMAIN}';
 				create database ${DOMAIN};
 				GRANT ALL PRIVILEGES ON ${DOMAIN}.* TO ${domain}@localhost;
 			MYSQL
