@@ -69,7 +69,7 @@ NSES() {
 		chown www-data /var/www/html/ -R && chgrp www-data /var/www/html/ -R
 		find /var/www/html/* -type d -exec chmod 755 {} \; && find /var/www/html/* -type f -exec chmod 644 {} \;
 		systemctl restart nginx.service
-		echo 'Web Substrate created. Please change password for your new DB user.'
+		echo 'Web Substrate made. Please change password for your new DB user.'
 	WSM
 	chmod +x /etc/nginx/sites-available/wsm.sh
 
