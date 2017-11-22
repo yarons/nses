@@ -1,11 +1,11 @@
-NSES stands for Nginx Server Environment Setup. *nses.sh* is a script that let's you to create a minimalist Nginx server environment.
+NSES stands for Nginx Server Environment Setup. *nses.sh* is a script that let's you to create a minimalist Nginx server environment. It is suitable for use after basic configuration of `/etc/nginx/nginx.conf`.
 
 **WSM - Web Substrate Maker:**
 The script includes a nice maker I've named "WSM" which does the following actions in execution (after providing a web domain+tld as an argument to its alias).
 
 The Bash alias (also created by the script, is wsm, so type in Bash prompt:
 
-$ wsm domain.tld
+`wsm domain.tld`
 
 *The maker does:*
 
@@ -28,12 +28,14 @@ https://github.com/Microsoft/WSL/issues/2006
 1. Install autohotkey and run the script (trimClipboard.ahk).
 2. Start Nano in the following way, paste the script, exit with saving and it will run:
 
+`
 bash /dev/fd/3 3<<-'WSLNANO'
 	sed -i 's/bind ^J enter main//g' /etc/nanorc # Clean nanorc from previous relevant conf.
 	bash -c "echo 'bind ^J enter main' >> /etc/nanorc"
 	rm ~/script.sh ; nano ~/script.sh && chmod +x ~/script.sh && bash ~/script.sh && rm ~/script.sh
 	sed -i 's/bind ^J enter main//g' /etc/nanorc
 WSLNANO
+`
 
 __Running the script from nix:__
 
