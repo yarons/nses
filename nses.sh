@@ -25,7 +25,7 @@ NSES() {
 	/etc/init.d/php7.0-fpm restart # MBP.
 	systemctl restart nginx.service
 
-	cat <<-'CWS' > /etc/nginx/sites-available/cws.sh
+	cat <<-'WSM' > /etc/nginx/sites-available/wsm.sh
 		#!/bin/sh
 		for domain; do
 			cat << SBLOCK > "/etc/nginx/sites-available/${domain}.conf" 
@@ -70,8 +70,8 @@ NSES() {
 		find /var/www/html/* -type d -exec chmod 755 {} \; && find /var/www/html/* -type f -exec chmod 644 {} \;
 		systemctl restart nginx.service
 		echo 'Web Substrate created. Please change password for your new DB user.'
-	CWS
-	chmod +x /etc/nginx/sites-available/cws.sh
+	WSM
+	chmod +x /etc/nginx/sites-available/wsm.sh
 
 	cat <<-'MANUAL_BACKUP' > /opt/backup.sh
 		zip -r /var/www/html/html-$(date +\%F-\%T).zip /var/www/html -x '*wp-content/cache*'
@@ -85,7 +85,7 @@ NSES() {
 	cat <<-'BASHRC' >> /etc/bash.bashrc
 
 		alias brc="nano /etc/bash.bashrc"
-		alias cws="bash /etc/nginx/sites-available/cws.sh"
+		alias wsm="bash /etc/nginx/sites-available/wsm.sh"
 		alias rss="systemctl restart nginx.service"
 		alias www="cd /var/www/html"
 		alias imb="bash /opt/backup.sh"
