@@ -1,7 +1,6 @@
-NSES stands for Nginx Server Environment Setup. *nses.sh* is a script that let's you to create a minimalist Nginx server environment. This is basically the only file of this program. The reason for any other code file in the repository is mentioned below.
+**NSES** stands for *Nginx Server Environment Setup*. The file *nses.sh* is a script that let's you to create a minimalist Nginx server environment. This is basically the only file of this program. The reason for any other code file in the repository is mentioned below.
 
-* This program is aimed for Debian based systems, as it also adds a few aliases and programs.
-* This program should be used after basic configuration of `/etc/nginx/nginx.conf`.
+NSES is aimed for fresh Debian based systems (as it also adds some packages and aliases), and should be used after basic configuration of `/etc/nginx/nginx.conf`.
 
 ## Installation
 
