@@ -7,26 +7,26 @@ NSES stands for Nginx Server Environment Setup. *nses.sh* is a script that let's
 
 ### Stripping leading tabs
 
-The script has some leads (leading whitespaces) even outside its function, so stripping these out in copying (so they wouldn't be part of the script when it's in copied to clipboard is essential.
+The script has some leads (leading whitespaces) even outside its main function, so stripping all of them out in copying (so they wouldn't be part of the script when it's in copied to clipboard) is essential for proper execution.
 
 #### Installing the script from Win10 WSL:
 
-Make sure to use this code for copying without Nano trailing whitespaces bug (2017):
-https://github.com/Microsoft/WSL/issues/2006
+If you're using Nano, make sure to execute the following code to avoid [Nano's trailing whitespaces bug (2017)](https://github.com/Microsoft/WSL/issues/2006).
 
 *To solve:*
 
 1. Install autohotkey and run the script (trimClipboard.ahk).
 2. Start Nano in the following way, paste the script, exit with saving and it will run:
 
-`
+```
 bash /dev/fd/3 3<<-'WSLNANO'
 	sed -i 's/bind ^J enter main//g' /etc/nanorc # Clean nanorc from previous relevant conf.
 	bash -c "echo 'bind ^J enter main' >> /etc/nanorc"
 	rm ~/script.sh ; nano ~/script.sh && chmod +x ~/script.sh && bash ~/script.sh && rm ~/script.sh
 	sed -i 's/bind ^J enter main//g' /etc/nanorc
 WSLNANO
-`
+```
+
 #### Installing the script from nix:
 
 Make sure to strip leading tabs when copying in any way you wish (I only know the way I described above in Windows with AHk).
