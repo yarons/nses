@@ -33,7 +33,7 @@ Make sure to strip leading tabs when copying in any way you wish (I only know th
 
 ## Usage
 
-The script itself is installed only once, then you can use its **Web Substrate Maker** freely.
+The script itself is installed only once, then you can use its **Webapp Substrate Maker** freely.
 
 ### WSM - Webapp Substrate Maker: ###
 
