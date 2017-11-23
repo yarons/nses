@@ -4,11 +4,11 @@ NSES is aimed for fresh Debian based systems (as it also adds some packages and 
 
 ## Installation
 
-### Stripping leading tabs
+### Stripping leads
 
 The script has some leads (leading whitespaces) even outside its main function, so stripping all of them out in copying (so they wouldn't be part of the script when it's in copied to clipboard) is essential for proper execution.
 
-#### Installing the script from Win10 WSL:
+#### Installing the script from Win10 WSL
 
 If you're using Nano, make sure to execute the following code to avoid [Nano's trailing whitespaces bug (2017)](https://github.com/Microsoft/WSL/issues/2006).
 
@@ -26,7 +26,7 @@ bash /dev/fd/3 3<<-'WSLNANO'
 WSLNANO
 ```
 
-#### Installing the script from nix:
+#### Installing the script from nix
 
 Make sure to strip leading tabs when copying in any way you wish (I only know the way I described above in Windows with AHk).
 
@@ -34,7 +34,7 @@ Make sure to strip leading tabs when copying in any way you wish (I only know th
 
 The script itself is installed only once, then you can use its Webapp Substrate Maker freely.
 
-### WSM - Webapp Substrate Maker: ###
+### WSM - Webapp Substrate Maker ###
 
 The script includes "WSM", a maker which does the following actions in execution (after providing a domain+tld as an argument to the script's Bash alias):
 
@@ -44,7 +44,7 @@ The script includes "WSM", a maker which does the following actions in execution
 3. Changes the server block in accordance.
 4. Creates a mysql, authenticated, all privilieged user, a DB, and a password, all as your domain (password should be changed after NSES exeuction per each domain).
 
-#### Using the maker:
+#### Using the maker
 
 The Bash alias (also created by the script), is `wsm`, so type in Bash prompt:
 
