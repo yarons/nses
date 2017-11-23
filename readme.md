@@ -33,13 +33,13 @@ Make sure to strip leading tabs when copying in any way you wish (I only know th
 
 ## Usage
 
-The script itself is installed only once, then you can use its **Webapp Substrate Maker** freely.
+The script itself is installed only once, then you can use its Webapp Substrate Maker freely.
 
 ### WSM - Webapp Substrate Maker: ###
 
-The script includes a nice maker I've named "WSM" which does the following actions in execution (after providing a domain+tld as an argument to the script's Bash alias).
+The script includes "WSM", a maker which does the following actions in execution (after providing a domain+tld as an argument to the script's Bash alias).
 
-The Bash alias (also created by the script), is wsm, so type in Bash prompt:
+The Bash alias (also created by the script), is `wsm`, so type in Bash prompt:
 
 `wsm domain.tld`
 
