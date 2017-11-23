@@ -37,16 +37,18 @@ The script itself is installed only once, then you can use its Webapp Substrate 
 
 ### WSM - Webapp Substrate Maker: ###
 
-The script includes "WSM", a maker which does the following actions in execution (after providing a domain+tld as an argument to the script's Bash alias).
-
-The Bash alias (also created by the script), is `wsm`, so type in Bash prompt:
-
-`wsm domain.tld`
-
-*The maker does:*
+The script includes "WSM", a maker which does the following actions in execution (after providing a domain+tld as an argument to the script's Bash alias):
 
 1. Ceates an Nginx webapp conf file in `/etc/nginx/sites-available` with the domain you provide as an argument in execution.
 2. Creates an accordant symlink `/etc/nginx/sites-enabled`.
 2. Creates a Let'sEncrypt signed certificate to that domain.
 3. Changes the server block in accordance.
 4. Creates a mysql, authenticated, all privilieged user, a DB, and a password, all as your domain (password should be changed after NSES exeuction per each domain).
+
+#### Using the maker:
+
+The Bash alias (also created by the script), is `wsm`, so type in Bash prompt:
+
+`wsm domain.tld`
+
+Note: You might need to add `http2` to the created webapp substratre in `/etc/nginx/sites-available`.
